@@ -3,7 +3,7 @@
 Sejak diberlakukannya *Work from Home* (WFH) oleh pemerintah, semakin banyak masyarakat yang berusaha mencari kegiatan selama Di Rumah Aja. Berbagai macam kegiatan yang bisa dilakukan untuk mengisi waktu selama Di Rumah Aja seperti menonton film dan memasak bersama keluarga pun menjadi banyak dilakukan. Tak terkecuali dengan kegiatan berkebun.
 
 
-![WhatsApp Image 2020-06-27 at 20.08.24](Aspose.Words.ae6d1dc8-c136-4d32-a7ef-2df75559a5ce.001.jpeg "WhatsApp Image 2020-06-27 at 20.08.24")
+![Aspose Words ae6d1dc8-c136-4d32-a7ef-2df75559a5ce 001](https://github.com/user-attachments/assets/3b8fded0-616a-4f93-9620-0e3f4fa8f16e)
 
 Tunas pada bibit cabai yang sudah mulai bermunculan (Dok Pottani)
 
