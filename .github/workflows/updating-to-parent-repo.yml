@@ -12,7 +12,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          repository: git@github.com:Pottani-Space/pottaniweb.git
+          repository: Pottani-Space/pottaniweb
           token: ${{ secrets.TOKEN }}
           submodules: true
       - name: Pull & Update
