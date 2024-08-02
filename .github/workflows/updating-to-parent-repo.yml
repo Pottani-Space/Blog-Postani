@@ -9,6 +9,16 @@ jobs:
   updating-to-parent-repo:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          repository: Pottani-Space/pottaniweb
+          token: ${{ secrets.TOKEN }}
+          submodules: true
+      - name: Pull & Update
+        run: |
+          git submodule update --init --recursive
+          git submodule update --recursive --remote
       - name: Log all Markdown files
         run: |
           echo "Logging all Markdown files:"
@@ -23,16 +33,6 @@ jobs:
           else
             echo "All Markdown file names are valid."
           fi
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          repository: Pottani-Space/pottaniweb
-          token: ${{ secrets.TOKEN }}
-          submodules: true
-      - name: Pull & Update
-        run: |
-          git submodule update --init --recursive
-          git submodule update --recursive --remote
       - name: Commit
         run: |
           git config user.email "actions@github.com"
