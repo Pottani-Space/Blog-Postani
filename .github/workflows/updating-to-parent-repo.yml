@@ -1,0 +1,38 @@
+name: Send submodule updates to parent repo
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  validate-filenames:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          repository: git@github.com:Pottani-Space/pottaniweb.git
+          token: ${{ secrets.TOKEN }}
+          submodules: true
+      - name: Pull & Update
+        run: |
+          git submodule update --init --recursive
+          git submodule update --recursive --remote
+      - name: Commit
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "Github Actions - Update"
+          git add --all
+          git commit -m "feat: Update submodules" || echo "No changes to commit"
+          git push
+      - name: Find invalid Markdown files
+        run: |
+          invalid_files=$(find . -type f -name '*.md' ! -regex '\./[^0-9][a-zA-Z0-9_]*\.md' -print)
+          if [ -n "$invalid_files" ]; then
+            echo "Invalid Markdown file names found:"
+            echo "$invalid_files"
+            exit 1
+          else
+            echo "All Markdown file names are valid."
+          fi
