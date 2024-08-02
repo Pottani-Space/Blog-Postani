@@ -9,6 +9,10 @@ jobs:
   updating-to-parent-repo:
     runs-on: ubuntu-latest
     steps:
+      - name: Log all Markdown files
+        run: |
+          echo "Logging all Markdown files:"
+          find . -type f -name '*.md'
       - name: Find invalid Markdown files
         run: |
           invalid_files=$(find . -type f -name '*.md' ! -regex '.*/[^0-9][a-zA-Z0-9_]*\.md')
