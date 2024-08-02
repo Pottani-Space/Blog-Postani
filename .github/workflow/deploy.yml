@@ -1,0 +1,23 @@
+name: Validate Markdown File Names
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  validate-filenames:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Find invalid Markdown files
+        run: |
+          invalid_files=$(find . -type f -name '*.md' ! -regex '\./[^0-9][a-zA-Z0-9_]*\.md' -print)
+          if [ -n "$invalid_files" ]; then
+            echo "Invalid Markdown file names found:"
+            echo "$invalid_files"
+            exit 1
+          else
+            echo "All Markdown file names are valid."
+          fi
