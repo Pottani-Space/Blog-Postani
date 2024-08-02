@@ -28,7 +28,7 @@ jobs:
           git push
       - name: Find invalid Markdown files
         run: |
-          invalid_files=$(find . -type f -name '*.md' ! -regex '\./[^0-9][a-zA-Z0-9_]*\.md' -print)
+          invalid_files=$(find . -type f -name '*.md' ! -regex '.*/[^0-9][a-zA-Z0-9_]*\.md' -print)
           if [ -n "$invalid_files" ]; then
             echo "Invalid Markdown file names found:"
             echo "$invalid_files"
