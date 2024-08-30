@@ -1,3 +1,8 @@
+---
+title: ﻿Di Tengah Trend Bercocok Tanam di Masa Pandemi
+date: 2024-08-30T12:44:00.000Z
+description: ﻿Di Tengah Trend Bercocok Tanam di Masa Pandemi
+---
 # ﻿Di Tengah Trend Bercocok Tanam di Masa Pandemi
 
 Sejak diberlakukannya *Work from Home* (WFH) oleh pemerintah, semakin banyak masyarakat yang berusaha mencari kegiatan selama Di Rumah Aja. Berbagai macam kegiatan yang bisa dilakukan untuk mengisi waktu selama Di Rumah Aja seperti menonton film dan memasak bersama keluarga pun menjadi banyak dilakukan. Tak terkecuali dengan kegiatan berkebun.

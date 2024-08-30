@@ -1,0 +1,31 @@
+backend:
+  name: github
+  repo: Pottani-Space/Blog-Postani # Path to your GitHub repository
+  branch: main
+public_folder: /public/assets
+media_folder: /public/assets/content-imgs
+collections:
+  - name: "blog-indonesia"
+    label: "Blog (Indonesia)"
+    folder: "contents"
+    create: true
+    slug: "{{slug}}"
+    path: "{{slug}}"
+    media_folder: "/media"
+    public_folder: "/assets/content-imgs"
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Featured Image"
+        required: false
+        name: "thumbnail"
+        widget: "image"
+        choose_url: true
+        default: ""
+        media_library:
+          config:
+            multiple: true
