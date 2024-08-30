@@ -1,5 +1,5 @@
 backend:
-  name: git-gateway
+  name: github
   repo: Pottani-Space/Blog-Postani
   branch: main
 public_folder: /public/assets
