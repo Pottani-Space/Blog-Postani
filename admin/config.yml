@@ -1,6 +1,6 @@
 backend:
-  name: github
-  repo: Pottani-Space/Blog-Postani # Path to your GitHub repository
+  name: git-gateway
+  repo: Pottani-Space/Blog-Postani
   branch: main
 public_folder: /public/assets
 media_folder: /public/assets/content-imgs
