@@ -16,20 +16,22 @@ jobs:
           token: ${{ secrets.TOKEN }}
           submodules: true
       
-      - name: Pull & Update
+      - name: Pull & Update Submodules
         run: |
           git submodule update --init --recursive
           git submodule update --recursive --remote
       
       - name: Stage Submodule Changes
         run: |
+          # Stage any changes to the submodule itself
           git add .gitmodules
+          # Stage changes within each submodule
           git add $(git submodule --quiet foreach 'echo $sm_path')
-
+      
       - name: Check for Changes
         id: check_changes
         run: |
-          git diff --quiet || echo "changes"
+          git diff --cached --exit-code || echo "changes"
 
       - name: Commit and Push
         if: steps.check_changes.outputs.changes == 'changes'
@@ -38,3 +40,8 @@ jobs:
           git config user.name "Github Actions - Update"
           git commit -m "feat: Update submodules"
           git push
+      
+      - name: Debug Final Status
+        run: |
+          echo "Final repository status:"
+          git status
