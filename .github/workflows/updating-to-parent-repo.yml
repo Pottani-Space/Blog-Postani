@@ -15,18 +15,24 @@ jobs:
           repository: Pottani-Space/pottaniweb
           token: ${{ secrets.TOKEN }}
           submodules: true
-      
+
       - name: Pull & Update Submodules
         run: |
           git submodule update --init --recursive
           git submodule update --recursive --remote
+          
+          # Confirm the submodule updates were successful
+          git submodule foreach 'git fetch origin && git checkout main && git pull origin main'
       
+      - name: Check Submodule Status
+        run: |
+          # Check if submodule pointers have been updated
+          git status
+
       - name: Stage Submodule Changes
         run: |
-          # Stage any changes to the submodule itself
           git add .gitmodules
-          # Stage changes within each submodule
-          git add $(git submodule --quiet foreach 'echo $sm_path')
+          git add $(git submodule foreach --quiet 'echo $sm_path')
       
       - name: Check for Changes
         id: check_changes
@@ -40,7 +46,7 @@ jobs:
           git config user.name "Github Actions - Update"
           git commit -m "feat: Update submodules"
           git push
-      
+
       - name: Debug Final Status
         run: |
           echo "Final repository status:"
