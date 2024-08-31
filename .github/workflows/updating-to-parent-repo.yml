@@ -15,28 +15,26 @@ jobs:
           repository: Pottani-Space/pottaniweb
           token: ${{ secrets.TOKEN }}
           submodules: true
+      
       - name: Pull & Update
         run: |
           git submodule update --init --recursive
           git submodule update --recursive --remote
-      - name: Log all Markdown files
+      
+      - name: Stage Submodule Changes
         run: |
-          echo "Logging all Markdown files:"
-          find . -type f -name '*.md'
-      - name: Find invalid Markdown files
+          git add .gitmodules
+          git add $(git submodule --quiet foreach 'echo $sm_path')
+
+      - name: Check for Changes
+        id: check_changes
         run: |
-          invalid_files=$(find . -type f -name '*.md' ! -regex '.*/[^0-9][a-zA-Z0-9_]*\.md')
-          if [ -n "$invalid_files" ]; then
-            echo "Invalid Markdown file names found:"
-            echo "$invalid_files"
-            exit 1
-          else
-            echo "All Markdown file names are valid."
-          fi
-      - name: Commit
+          git diff --quiet || echo "changes"
+
+      - name: Commit and Push
+        if: steps.check_changes.outputs.changes == 'changes'
         run: |
           git config user.email "actions@github.com"
           git config user.name "Github Actions - Update"
-          git add --all
-          git commit -m "feat: Update submodules" || echo "No changes to commit"
+          git commit -m "feat: Update submodules"
           git push
