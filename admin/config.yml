@@ -61,6 +61,7 @@ collections:
               - label: "Background"
                 name: "bg"
                 widget: "string"
+                default: "light"
               - label: "Featured Image"
                 required: true
                 name: "images"
@@ -68,3 +69,38 @@ collections:
                 media_folder: "/media/product-imgs"
                 public_folder: "/assets/product-imgs"
                 choose_url: true
+  - label: "Gallery"
+    name: "Gallery"
+    files:
+      - label: "Gallery"
+        name: "gallery"
+        file: "gallery.json"
+        fields:
+          - label: "Gallery"
+            name: "gallery"
+            widget: "list"
+            fields:
+              - label: "Image"
+                name: "img"
+                widget: "image"
+                required: true
+                media_folder: "/media/gallery"
+                public_folder: "/assets/gallery"
+              - label: "Description"
+                name: "desc"
+                widget: "object"
+                fields:
+                  - {
+                      label: "English",
+                      name: "en",
+                      widget: "string",
+                      required: false,
+                      default: "",
+                    }
+                  - {
+                      label: "Indonesia",
+                      name: "id",
+                      widget: "string",
+                      required: false,
+                      default: "",
+                    }
