@@ -1,0 +1,95 @@
+{
+  "products": [
+    {
+      "name": {
+        "id": "Daging Kambing Fillet",
+        "en": "Goat Meat Fillet"
+      },
+      "price": 140000,
+      "desc": {
+        "en": "Get your hands on the highest quality local (Javanese) goat meat fillet. The perfect choice for your special dishes! Only Rp 140,000/kg, make sure you always have it in stock in your kitchen.",
+        "id": "Segera dapatkan daging kambing lokal (Jawa) fillet dengan kualitas terbaik. Pilihan sempurna untuk hidangan spesial Anda! Hanya Rp 140.000/kg, pastikan stok selalu tersedia di dapur anda."
+      },
+      "images": "/assets/product-imgs/fillet.png",
+      "bg": "dark"
+    },
+    {
+      "name": {
+        "id": "Shank/ Paha Kambing",
+        "en": "Goat Shank/Thigh"
+      },
+      "price": 130000,
+      "desc": {
+        "id": "Dapatkan paha/ shanks kambing berkualitas dari Pottamart dengan harga Rp 130.000,-/ kg. Dengan ukuran variatif (1.4-2.3kg) cocok untuk berbagai hidangan favorit Anda. ",
+        "en": "Get quality goat thighs / shanks from Pottamart at IDR 130,000 / kg. With varied sizes (1.4-2.3kg) suitable for a variety of your favorite dishes. "
+      },
+      "images": "/assets/product-imgs/paha.png",
+      "bg": "dark"
+    },
+    {
+      "name": {
+        "en": "Super Goat Ribs",
+        "id": "Iga Kambing Super"
+      },
+      "price": 140000,
+      "desc": {
+        "en": "Get goat ribs with thick meat and fresh condition for IDR 100,000/kg. The option to shred it to your order is available.",
+        "id": "Dapatkkan iga kambing dengan daging tebal dan kondisi segar seharga Rp 100.000/kg. Tersedia opsi untuk dicacah sesuai pesanan Anda."
+      },
+      "images": "/assets/product-imgs/iga.jpeg",
+      "bg": "dark"
+    },
+    {
+      "name": {
+        "en": "Carcass of Adult Goats",
+        "id": "Karkas Kambing Dewasa"
+      },
+      "price": 100000,
+      "desc": {
+        "en": "Get goat carcasses aged 7-10 months for IDR 125,000/kg. More satisfaction comes in one piece (without head, feet and white offal). ",
+        "id": "Dapatkan karkas kambing usia 7-10 bulan seharga Rp 125.000,-/kg. Lebih puas datang dalam keadaan utuh (tanpa kepala, kaki, dan jeroan putih). "
+      },
+      "images": "/assets/product-imgs/karkas.png",
+      "bg": "light"
+    },
+    {
+      "name": {
+        "en": "Carcass of Juvenille Goat",
+        "id": "Karkas Kambing Muda"
+      },
+      "price": 125000,
+      "desc": {
+        "en": "Get a young goat carcass (balibul) for IDR 140,000/kg. It is more satisfying to come in one piece (without head, feet, and white viscera). ",
+        "id": "Dapatkan karkas kambing muda (balibul) seharga Rp 140.000,-/kg. Lebih puas datang dalam keadaan utuh (tanpa kepala, kaki, dan jeroan putih). "
+      },
+      "images": "/assets/product-imgs/karkas2.jpeg",
+      "bg": "dark"
+    },
+    {
+      "name": {
+        "en": "Goat Offal",
+        "id": "Jeroan Kambing"
+      },
+      "price": 30000,
+      "desc": {
+        "en": "Goat offal ",
+        "id": "Jeroan kambing "
+      },
+      "images": "/assets/product-imgs/jeroan.webp",
+      "bg": "light"
+    },
+    {
+      "name": {
+        "en": "Goat Head-Toe",
+        "id": "Kepala-kaki Kambing"
+      },
+      "price": 65000,
+      "desc": {
+        "en": "Goat head and leg cost Rp 65,000/kg; ready to be processed according to your cooking needs.",
+        "id": "Kepala dan kaki kambing seharga Rp 65.000/kg; siap diolah sesuai kebutuhan masakan Anda."
+      },
+      "images": "/assets/product-imgs/kepala.jpg",
+      "bg": "dark"
+    }
+  ]
+}

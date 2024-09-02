@@ -3,16 +3,16 @@ backend:
   repo: Pottani-Space/Blog-Postani
   branch: main
 public_folder: /public/assets
-media_folder: /public/assets/content-imgs
+media_folder: /public/assets/post-imgs
 collections:
   - name: "blog-indonesia"
     label: "Blog (Indonesia)"
-    folder: "contents"
+    folder: "posts"
     create: true
     slug: "{{slug}}"
     path: "{{slug}}"
-    media_folder: "/media"
-    public_folder: "/assets/content-imgs"
+    media_folder: "/media/post-imgs"
+    public_folder: "/assets/post-imgs"
     editor:
       preview: false
     fields:
@@ -29,3 +29,42 @@ collections:
         media_library:
           config:
             multiple: true
+  - label: "Products"
+    name: "Products"
+    files:
+      - label: "Products"
+        name: "products"
+        file: "products.json"
+        fields:
+          - label: "Products"
+            name: "products"
+            required: true
+            widget: "list"
+            fields:
+              - label: "Name"
+                name: "name"
+                widget: "object"
+                required: true
+                fields:
+                  - { label: "English", name: "en", widget: "string" }
+                  - { label: "Indonesia", name: "id", widget: "string" }
+              - label: "Description"
+                name: "desc"
+                widget: "object"
+                fields:
+                  - { label: "English", name: "en", widget: "string" }
+                  - { label: "Indonesia", name: "id", widget: "string" }
+              - label: "Price"
+                name: "price"
+                required: true
+                widget: "number"
+              - label: "Background"
+                name: "bg"
+                widget: "string"
+              - label: "Featured Image"
+                required: true
+                name: "images"
+                widget: "image"
+                media_folder: "/media/product-imgs"
+                public_folder: "/assets/product-imgs"
+                choose_url: true
